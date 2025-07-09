@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pilih Jadwal Kursus</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="getTimeAndWeather()">
+    <audio autoplay loop>
+    <source src="musik.mp3" type="audio/mp3">
+  </audio>
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="daftar.html">📋 Daftar Kursus</a></li>
+      <li><a href="pilih.html">🗓️ Pilih Jadwal</a></li>
+    </ul>
+  </nav>
+
+  <h1>Pilih Jadwal Kursus</h1>
+
+  <form onsubmit="event.preventDefault(); tampilkanJadwal();">
+    <input type="text" id="nama-jadwal" placeholder="Nama" required />
+    <select id="hari">
+      <option>Senin</option>
+      <option>Selasa</option>
+      <option>Rabu</option>
+      <option>Kamis</option>
+      <option>Jumat</option>
+    </select>
+    <select id="jam">
+      <option>08.00 – 10.00</option>
+      <option>10.00 – 12.00</option>
+      <option>13.00 – 15.00</option>
+      <option>15.00 – 17.00</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+
+  <a href="assets/jadwal.pdf" download>📥 Download Jadwal PDF</a>
+
+  <div id="output-jadwal"></div>
+  <div id="info"></div>
+  <script src="script.js"></script>
+</body>
+</html>
